@@ -3,8 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sova Yoga - Персональная йога</title>
+    <title>Sova Yoga - Anna Belousova | Персональная йога в Стокгольме</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Персонализированная йога практика в Швеции с Анной Белоусовой. Индивидуальные занятия онлайн и офлайн в Стокгольме.">
+    <meta name="keywords" content="йога, Швеция, Anna Belousova, Анна Белоусова, персональный тренер, онлайн йога, здоровье, стокгольм, медитация, sova yoga">
+    <meta name="author" content="Anna Belousova - Sova Yoga">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sovayoga.se">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sovayoga.se">
+    <meta property="og:title" content="Sova Yoga - Anna Belousova | Персональная йога в Стокгольме">
+    <meta property="og:description" content="Персонализированная йога практика в Швеции с Анной Белоусовой. Индивидуальные занятия онлайн и офлайн.">
+    <meta property="og:image" content="https://sovayoga.se/assets/images/og-image.jpg">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="Sova Yoga - Anna Belousova">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://sovayoga.se">
+    <meta property="twitter:title" content="Sova Yoga - Anna Belousova | Персональная йога в Стокгольме">
+    <meta property="twitter:description" content="Персонализированная йога практика в Швеции с Анной Белоусовой. Индивидуальные занятия онлайн и офлайн.">
+    <meta property="twitter:image" content="https://sovayoga.se/assets/images/og-image.jpg">
+    
+    <!-- PWA Manifest -->
+    <meta name="theme-color" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Sova Yoga">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Sova Yoga - Anna Belousova",
+      "description": "Персонализированная йога практика в Швеции",
+      "url": "https://sovayoga.se",
+      "telephone": "+46702129793",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "SE",
+        "addressLocality": "Stockholm"
+      },
+      "serviceType": ["Йога", "Персональные тренировки"],
+      "instructor": {
+        "@type": "Person",
+        "name": "Anna Belousova"
+      }
+    }
+    </script>
+
+    <!-- ВСТРОЕННЫЕ СТИЛИ -->
     <style>
+        :root {
+            --primary-color: #667eea;
+            --primary-dark: #5a67d8;
+            --secondary-color: #764ba2;
+            --accent-color: #48bb78;
+            --text-color: #2d3748;
+            --text-light: #4a5568;
+            --bg-light: #f7fafc;
+            --border-color: #e2e8f0;
+            --border-light: #edf2f7;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+            --radius: 8px;
+            --radius-lg: 12px;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -12,34 +81,25 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
             min-height: 100vh;
-            color: #333;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 15px;
         }
 
+        /* Header */
         .header {
             text-align: center;
-            color: white;
             margin-bottom: 30px;
+            color: white;
             position: relative;
-        }
-
-        .header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
         }
 
         .language-switcher {
@@ -47,70 +107,67 @@
             top: 0;
             right: 0;
             display: flex;
-            gap: 10px;
+            gap: 5px;
         }
 
         .lang-btn {
-            padding: 8px 16px;
-            background: rgba(255,255,255,0.2);
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
             color: white;
-            border: 2px solid transparent;
-            border-radius: 20px;
+            padding: 8px 15px;
+            border-radius: var(--radius);
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.3s;
             font-size: 14px;
         }
 
-        .lang-btn.active {
-            background: white;
-            color: #667eea;
-            border-color: white;
+        .lang-btn:hover, .lang-btn.active {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
         }
 
-        .lang-btn:hover {
-            background: rgba(255,255,255,0.3);
+        .header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
-        .card {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin: 0 10px;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
+        /* Navigation */
         .tabs {
             display: flex;
-            gap: 10px;
-            margin-bottom: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 4px;
+            margin-bottom: 25px;
             flex-wrap: wrap;
+            gap: 2px;
         }
 
         .tab {
-            padding: 12px 24px;
-            background: rgba(255,255,255,0.2);
+            flex: 1;
+            min-width: 100px;
+            padding: 10px 6px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            border-radius: var(--radius);
+            transition: all 0.3s;
+            font-size: 13px;
+            word-wrap: break-word;
+        }
+
+        .tab:hover, .tab.active {
+            background: rgba(255, 255, 255, 0.2);
             color: white;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 16px;
         }
 
-        .tab.active {
-            background: white;
-            color: #667eea;
-        }
-
-        .tab:hover {
-            background: rgba(255,255,255,0.3);
-        }
-
+        /* Screens */
         .screen {
             display: none;
         }
@@ -119,238 +176,175 @@
             display: block;
         }
 
+        /* Cards */
+        .card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 25px;
+            box-shadow: var(--shadow-lg);
+            margin-bottom: 20px;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        /* Forms */
         .form-group {
             margin-bottom: 20px;
         }
 
-        .form-group label {
+        label {
             display: block;
             margin-bottom: 8px;
             font-weight: 600;
-            color: #555;
+            color: var(--text-color);
         }
 
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
+        input, select, textarea {
             width: 100%;
             padding: 12px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius);
             font-size: 16px;
-            transition: border-color 0.3s ease;
+            transition: border-color 0.3s;
+            font-family: inherit;
         }
 
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
+        input:focus, select:focus, textarea:focus {
             outline: none;
-            border-color: #667eea;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
         }
 
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        /* Buttons */
+        .btn {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: var(--radius);
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: #718096;
+        }
+
+        .btn-secondary:hover {
+            background: #4a5568;
+        }
+
+        .btn-small {
+            padding: 8px 16px;
+            font-size: 14px;
+            width: auto;
+        }
+
+        /* Checkbox groups */
         .checkbox-group {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 10px;
         }
 
         .checkbox-item {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             padding: 10px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
+            border: 2px solid var(--border-light);
+            border-radius: var(--radius);
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.3s;
         }
 
         .checkbox-item:hover {
-            border-color: #667eea;
-            background: #f8f9ff;
+            border-color: var(--primary-color);
+            background: var(--bg-light);
         }
 
         .checkbox-item input[type="checkbox"] {
             width: auto;
+            margin: 0;
         }
 
+        /* Sliders */
         .slider-group {
-            margin-top: 15px;
+            position: relative;
         }
 
         .slider {
             width: 100%;
-            margin: 10px 0;
+            height: 6px;
+            border-radius: 3px;
+            background: var(--border-color);
+            outline: none;
+            -webkit-appearance: none;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            cursor: pointer;
+            border: none;
         }
 
         .slider-labels {
             display: flex;
             justify-content: space-between;
-            font-size: 14px;
-            color: #666;
-            margin-top: 5px;
-        }
-
-        .btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 25px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            width: 100%;
-            margin-top: 20px;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-        }
-
-        .btn-secondary {
-            background: #6c757d;
             margin-top: 10px;
-        }
-
-        .dashboard-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .stats-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 20px;
-            border-radius: 15px;
-            text-align: center;
-        }
-
-        .stats-number {
-            font-size: 2rem;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .client-list {
-            max-height: 400px;
-            overflow-y: auto;
-        }
-
-        .client-item {
-            padding: 15px;
-            border-bottom: 1px solid #e0e0e0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .client-info h4 {
-            margin-bottom: 5px;
-            color: #333;
-        }
-
-        .client-info p {
-            color: #666;
-            font-size: 14px;
-        }
-
-        .status-indicator {
-            padding: 5px 10px;
-            border-radius: 15px;
             font-size: 12px;
-            font-weight: 600;
+            color: var(--text-light);
         }
 
-        .status-good {
-            background: #d4edda;
-            color: #155724;
-        }
-
-        .status-attention {
-            background: #fff3cd;
-            color: #856404;
-        }
-
-        .status-concern {
-            background: #f8d7da;
-            color: #721c24;
-        }
-
-        .schedule-grid {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            gap: 10px;
-            margin-top: 20px;
-        }
-
-        .day-slot {
-            padding: 15px 10px;
-            text-align: center;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .day-slot:hover {
-            border-color: #667eea;
-            background: #f8f9ff;
-        }
-
-        .day-slot.selected {
-            background: #667eea;
-            color: white;
-            border-color: #667eea;
-        }
-
-        .time-slots {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            gap: 10px;
-            margin-top: 15px;
-        }
-
-        .time-slot {
-            padding: 15px 10px;
-            text-align: center;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 600;
-        }
-
-        .time-slot:hover {
-            border-color: #667eea;
-            background: #f8f9ff;
-        }
-
-        .time-slot.selected {
-            background: #667eea;
-            color: white;
-            border-color: #667eea;
-        }
-
-        .time-slot .time-label {
-            font-size: 18px;
-            margin-bottom: 5px;
-        }
-
-        .time-slot .time-note {
-            font-size: 12px;
-            opacity: 0.8;
-        }
-
+        /* Timezone info */
         .timezone-info {
-            background: linear-gradient(135deg, #e8f4fd 0%, #f0f9ff 100%);
-            border: 2px solid #b3e5fc;
-            border-radius: 12px;
+            background: var(--bg-light);
             padding: 15px;
+            border-radius: var(--radius);
             margin-bottom: 25px;
             text-align: center;
         }
@@ -360,504 +354,466 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
-            margin-bottom: 8px;
-            font-size: 16px;
-            color: #0277bd;
+            margin-bottom: 5px;
+            flex-wrap: wrap;
         }
 
         .timezone-icon {
             font-size: 18px;
         }
 
-        .timezone-note {
-            color: #0288d1;
-            font-style: italic;
-        }
-
-        .time-slot .local-time {
-            font-size: 18px;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        .time-slot .moscow-time {
-            font-size: 11px;
-            opacity: 0.7;
-            background: rgba(0,0,0,0.1);
-            padding: 2px 6px;
-            border-radius: 10px;
-            display: inline-block;
-            margin-bottom: 3px;
-        }
-
-        .time-slot.selected .moscow-time {
-            background: rgba(255,255,255,0.2);
-        }
-
-        .time-slot .trainer-note {
-            font-size: 12px;
-            margin-top: 5px;
-            opacity: 0.8;
-        }
-
-        .my-bookings-section {
-            margin-bottom: 35px;
-            padding-bottom: 25px;
-            border-bottom: 2px solid #e0e0e0;
-        }
-
-        .my-bookings-section h3 {
-            color: #667eea;
-            margin-bottom: 20px;
-            font-size: 1.3rem;
-        }
-
-        .booking-cards {
+        /* Schedule grid */
+        .schedule-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+            gap: 8px;
             margin-bottom: 20px;
         }
 
-        .booking-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 20px;
-            border-radius: 12px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .booking-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100px;
-            height: 100px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            transform: translate(30px, -30px);
-        }
-
-        .booking-card h4 {
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-        }
-
-        .booking-card .schedule {
-            font-size: 14px;
-            opacity: 0.9;
-            margin-bottom: 8px;
-        }
-
-        .booking-card .class-info {
-            font-size: 16px;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        .booking-card .regular-badge {
-            background: rgba(255,255,255,0.2);
-            padding: 4px 12px;
-            border-radius: 15px;
-            font-size: 12px;
-            display: inline-block;
-            margin-bottom: 10px;
-        }
-
-        .booking-actions {
-            display: flex;
-            gap: 10px;
-        }
-
-        .btn-small-white {
-            background: rgba(255,255,255,0.2);
-            color: white;
-            border: 1px solid rgba(255,255,255,0.3);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 12px;
+        .date-slot {
+            padding: 12px 8px;
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius);
+            text-align: center;
             cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .btn-small-white:hover {
-            background: rgba(255,255,255,0.3);
-        }
-
-        .new-booking-section h3 {
-            color: #667eea;
-            margin-bottom: 20px;
-            font-size: 1.3rem;
-        }
-
-        .class-type-filter {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 25px;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            padding: 10px 20px;
-            border: 2px solid #e0e0e0;
+            transition: all 0.3s;
             background: white;
-            color: #666;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: all 0.3s ease;
             font-size: 14px;
         }
 
-        .filter-btn.active {
-            background: #667eea;
+        .date-slot:hover, .date-slot.selected {
+            border-color: var(--primary-color);
+            background: var(--primary-color);
             color: white;
-            border-color: #667eea;
         }
 
-        .filter-btn:hover:not(.active) {
-            border-color: #667eea;
-            color: #667eea;
+        .date-slot.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Time slots */
+        .time-slots {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 8px;
         }
 
         .time-slot {
-            padding: 15px 10px;
+            padding: 12px 8px;
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius);
             text-align: center;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
             cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 600;
-            position: relative;
+            transition: all 0.3s;
+            background: white;
+            font-size: 14px;
+            line-height: 1.3;
         }
 
-        .time-slot:hover {
-            border-color: #667eea;
-            background: #f8f9ff;
-        }
-
-        .time-slot.selected {
-            background: #667eea;
+        .time-slot:hover, .time-slot.selected {
+            border-color: var(--primary-color);
+            background: var(--primary-color);
             color: white;
-            border-color: #667eea;
         }
 
-        .time-slot .local-time {
-            font-size: 18px;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        .time-slot .moscow-time {
-            font-size: 11px;
-            opacity: 0.7;
-            background: rgba(0,0,0,0.1);
-            padding: 2px 6px;
-            border-radius: 10px;
-            display: inline-block;
-            margin-bottom: 3px;
-        }
-
-        .time-slot.selected .moscow-time {
-            background: rgba(255,255,255,0.2);
-        }
-
-        .time-slot .class-type {
-            font-size: 11px;
-            background: #4caf50;
-            color: white;
-            padding: 2px 8px;
-            border-radius: 10px;
-            display: inline-block;
-            margin-bottom: 5px;
-        }
-
-        .time-slot .class-type.individual {
-            background: #ff9800;
-        }
-
-        .time-slot .class-type.group {
-            background: #4caf50;
-        }
-
-        .time-slot .participants {
-            font-size: 11px;
-            opacity: 0.7;
-            margin-top: 3px;
-        }
-
-        .time-slot.full {
-            opacity: 0.6;
+        .time-slot.booked {
+            background: #fed7d7;
+            border-color: #e53e3e;
             cursor: not-allowed;
-            background: #f5f5f5;
         }
 
-        .time-slot.full:hover {
-            border-color: #e0e0e0;
-            background: #f5f5f5;
+        /* Booking cards */
+        .booking-cards {
+            display: grid;
+            gap: 15px;
+            margin-bottom: 25px;
         }
 
-        .waiting-list-btn {
-            background: #ff9800;
-            color: white;
-            border: none;
-            padding: 6px 12px;
-            border-radius: 15px;
-            font-size: 11px;
-            cursor: pointer;
-            margin-top: 5px;
+        .booking-card {
+            background: var(--bg-light);
+            padding: 20px;
+            border-radius: var(--radius);
+            border-left: 4px solid var(--primary-color);
         }
 
-        .priority-badge {
-            background: #4caf50;
-            color: white;
-            padding: 4px 8px;
-            border-radius: 12px;
-            font-size: 10px;
-            position: absolute;
-            top: 8px;
-            right: 8px;
+        .booking-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
         }
 
-        .hidden {
+        .booking-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* Stats */
+        .stats-card {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .stats-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        /* Progress chart placeholder */
+        .progress-chart {
+            background: var(--bg-light);
+            padding: 40px;
+            border-radius: var(--radius);
+            text-align: center;
+            color: var(--text-light);
+        }
+
+        /* Client list */
+        .client-list {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .client-item {
+            padding: 15px;
+            border-bottom: 1px solid var(--border-light);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .client-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Contact info */
+        .contact-info {
+            background: var(--bg-light);
+            padding: 20px;
+            border-radius: var(--radius);
+            text-align: center;
+        }
+
+        /* Messages */
+        .message {
+            padding: 15px;
+            border-radius: var(--radius);
+            margin: 15px 0;
+            text-align: center;
             display: none;
         }
 
+        .message.success {
+            background: #c6f6d5;
+            color: #2d5a27;
+            border: 1px solid #9ae6b4;
+        }
+
+        .message.error {
+            background: #fed7d7;
+            color: #c53030;
+            border: 1px solid #feb2b2;
+        }
+
+        .message.info {
+            background: #bee3f8;
+            color: #2c5282;
+            border: 1px solid #90cdf4;
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
             .container {
                 padding: 10px;
             }
-
+            
             .header h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
-
+            
+            .header p {
+                font-size: 1rem;
+                margin: 0 5px;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+            
             .tabs {
-                justify-content: center;
+                flex-direction: column;
+                gap: 5px;
             }
-
+            
             .tab {
-                padding: 10px 16px;
+                min-width: auto;
+                padding: 12px 8px;
                 font-size: 14px;
             }
-
+            
             .language-switcher {
                 position: static;
                 justify-content: center;
-                margin-bottom: 20px;
+                margin-bottom: 15px;
             }
-
-            .schedule-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            .time-slots {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .timezone-info {
-                padding: 12px;
-                margin-bottom: 20px;
-            }
-
-            .timezone-indicator {
-                font-size: 14px;
-                gap: 6px;
-                flex-wrap: wrap;
-            }
-
-            .timezone-note {
-                font-size: 12px;
-            }
-
-            .time-slot {
-                padding: 12px 8px;
-            }
-
-            .time-slot .local-time {
-                font-size: 16px;
-            }
-
-            .time-slot .moscow-time {
-                font-size: 10px;
-                padding: 1px 4px;
-            }
-
-            .time-slot .trainer-note {
-                font-size: 11px;
-            }
-
-            .subscription-cards {
+            
+            .checkbox-group {
                 grid-template-columns: 1fr;
             }
-
-            .subscription-section h3,
-            .single-class-section h3 {
-                font-size: 1.2rem;
+            
+            .dashboard-grid {
+                grid-template-columns: 1fr;
             }
-
-            .class-type-filter {
-                justify-content: center;
+            
+            .schedule-grid {
+                grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+                gap: 6px;
             }
-
-            .filter-btn {
-                padding: 8px 16px;
-                font-size: 13px;
+            
+            .time-slots {
+                grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+                gap: 6px;
             }
-
-            .subscription-actions {
+            
+            .date-slot, .time-slot {
+                padding: 10px 6px;
+                font-size: 12px;
+            }
+            
+            .booking-details {
+                grid-template-columns: 1fr;
+                gap: 5px;
+            }
+            
+            .timezone-indicator {
                 flex-direction: column;
-                gap: 8px;
-            }
-
-            .btn-small-white {
-                text-align: center;
-                padding: 10px;
+                gap: 5px;
             }
         }
 
-        .progress-chart {
-            height: 300px;
-            background: #f8f9ff;
-            border-radius: 10px;
-            padding: 20px;
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .header p {
+                font-size: 0.9rem;
+            }
+            
+            .card {
+                padding: 15px;
+            }
+            
+            .tab {
+                padding: 10px 6px;
+                font-size: 12px;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+            
+            .schedule-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+            .time-slots {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+            }
+            
+            .time-slot {
+                padding: 8px 4px;
+                font-size: 11px;
+            }
+        }
+
+        /* Loading animation */
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.9);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #666;
+            z-index: 9999;
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid var(--border-color);
+            border-top: 5px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
 <body>
+    <!-- Main Container -->
     <div class="container">
-        <div class="header">
+        <!-- Header -->
+        <header class="header">
             <div class="language-switcher">
-                <button class="lang-btn active" onclick="changeLanguage('ru')">RU</button>
-                <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
+                <button class="lang-btn active" onclick="changeLanguage('ru')" aria-label="Переключить на русский">RU</button>
+                <button class="lang-btn" onclick="changeLanguage('en')" aria-label="Switch to English">EN</button>
             </div>
             <h1 data-text="title">Sova Yoga</h1>
-            <p data-text="subtitle">Персонализированная йога практика</p>
-        </div>
+            <p data-text="subtitle">Персонализированная йога практика с Анной Белоусовой</p>
+        </header>
 
-        <div class="tabs">
-            <button class="tab active" onclick="showScreen('registration')" data-text="tab_registration">Регистрация</button>
-            <button class="tab" onclick="showScreen('booking')" data-text="tab_booking">Запись на занятие</button>
-            <button class="tab" onclick="showScreen('diary')" data-text="tab_diary">Дневник состояния</button>
-            <button class="tab" onclick="showScreen('trainer')" data-text="tab_trainer">Кабинет тренера</button>
-            <button class="tab" onclick="showScreen('analytics')" data-text="tab_analytics">Аналитика</button>
-        </div>
+        <!-- Navigation Tabs -->
+        <nav class="tabs" role="navigation" aria-label="Основная навигация">
+            <a href="#auth" class="tab" data-screen="auth" data-text="tab_auth">Вход</a>
+            <a href="#registration" class="tab" data-screen="registration" data-text="tab_registration">Регистрация</a>
+            <a href="#booking" class="tab active" data-screen="booking" data-text="tab_booking">Запись на занятие</a>
+            <a href="#diary" class="tab" data-screen="diary" data-text="tab_diary">Дневник состояния</a>
+            <a href="#trainer" class="tab" data-screen="trainer" data-text="tab_trainer">Кабинет тренера</a>
+            <a href="#analytics" class="tab" data-screen="analytics" data-text="tab_analytics">Аналитика</a>
+            <a href="#profile" class="tab" data-screen="profile" data-text="tab_profile">Профиль</a>
+        </nav>
 
-        <!-- Экран регистрации -->
-        <div id="registration" class="screen active">
+        <!-- Auth Screen -->
+        <section id="auth" class="screen">
+            <div class="card">
+                <h2 data-text="auth_title">Вход в систему</h2>
+                
+                <form id="authForm">
+                    <div class="form-group">
+                        <label for="authEmail" data-text="email_label">Email</label>
+                        <input type="email" id="authEmail" required placeholder="anna@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="authPassword" data-text="password_label">Пароль</label>
+                        <input type="password" id="authPassword" required placeholder="Введите пароль">
+                    </div>
+
+                    <button type="submit" class="btn" data-text="sign_in_btn">Войти</button>
+                </form>
+
+                <div style="text-align: center; margin-top: 20px;">
+                    <a href="#registration" class="btn btn-outline" data-text="sign_up_link">Регистрация</a>
+                    <br><br>
+                    <a href="#forgot-password" data-text="forgot_password">Забыли пароль?</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration Screen -->
+        <section id="registration" class="screen">
             <div class="card">
                 <h2 data-text="welcome_title">Добро пожаловать! Расскажите о себе</h2>
                 
-                <div class="form-group">
-                    <label data-text="name_label">Имя</label>
-                    <input type="text" id="userName" data-placeholder="name_placeholder">
-                </div>
+                <form id="registrationForm">
+                    <div class="form-group">
+                        <label for="userName" data-text="name_label">Имя</label>
+                        <input type="text" id="userName" required placeholder="Ваше имя">
+                    </div>
 
-                <div class="form-group">
-                    <label data-text="email_label">Email</label>
-                    <input type="email" id="userEmail" data-placeholder="email_placeholder">
-                </div>
+                    <div class="form-group">
+                        <label for="userEmail" data-text="email_label">Email</label>
+                        <input type="email" id="userEmail" required placeholder="anna@example.com">
+                    </div>
 
-                <div class="form-group">
-                    <label data-text="level_label">Уровень подготовки</label>
-                    <select id="userLevel">
-                        <option value="beginner" data-text="level_beginner">Новичок (менее 3 месяцев)</option>
-                        <option value="elementary" data-text="level_elementary">Начальный (3-12 месяцев)</option>
-                        <option value="intermediate" data-text="level_intermediate">Средний (1-3 года)</option>
-                        <option value="advanced" data-text="level_advanced">Продвинутый (более 3 лет)</option>
-                    </select>
-                </div>
+                    <div class="form-group">
+                        <label for="userPassword" data-text="password_label">Пароль</label>
+                        <input type="password" id="userPassword" required minlength="6" placeholder="Минимум 6 символов">
+                    </div>
 
-                <div class="form-group">
-                    <label data-text="goals_label">Основные цели практики</label>
-                    <div class="checkbox-group">
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="goal_flexibility" name="goals">
-                            <label for="goal_flexibility" data-text="goal_flexibility">Гибкость</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="goal_strength" name="goals">
-                            <label for="goal_strength" data-text="goal_strength">Сила</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="goal_relaxation" name="goals">
-                            <label for="goal_relaxation" data-text="goal_relaxation">Расслабление</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="goal_therapy" name="goals">
-                            <label for="goal_therapy" data-text="goal_therapy">Терапия</label>
+                    <div class="form-group">
+                        <label for="userPasswordConfirm" data-text="confirm_password_label">Подтвердите пароль</label>
+                        <input type="password" id="userPasswordConfirm" required placeholder="Повторите пароль">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="userLevel" data-text="level_label">Уровень подготовки</label>
+                        <select id="userLevel" required>
+                            <option value="beginner" data-text="level_beginner">Новичок (менее 3 месяцев)</option>
+                            <option value="elementary" data-text="level_elementary">Начальный (3-12 месяцев)</option>
+                            <option value="intermediate" data-text="level_intermediate">Средний (1-3 года)</option>
+                            <option value="advanced" data-text="level_advanced">Продвинутый (более 3 лет)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label data-text="goals_label">Основные цели практики</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="goal_flexibility" name="goals" value="flexibility">
+                                <span data-text="goal_flexibility">Гибкость</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="goal_strength" name="goals" value="strength">
+                                <span data-text="goal_strength">Сила</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="goal_relaxation" name="goals" value="relaxation">
+                                <span data-text="goal_relaxation">Расслабление</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="goal_therapy" name="goals" value="therapy">
+                                <span data-text="goal_therapy">Терапия</span>
+                            </label>
                         </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label data-text="injuries_label">Травмы в анамнезе</label>
-                    <div class="checkbox-group">
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="injury_back" name="injuries">
-                            <label for="injury_back" data-text="injury_back">Спина</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="injury_knee" name="injuries">
-                            <label for="injury_knee" data-text="injury_knee">Колени</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="injury_neck" name="injuries">
-                            <label for="injury_neck" data-text="injury_neck">Шея</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="injury_hernia" name="injuries" onchange="toggleSpinalSections()">
-                            <label for="injury_hernia" data-text="injury_hernia">Грыжа/протрузия</label>
+                    <div class="form-group">
+                        <label data-text="injuries_label">Травмы в анамнезе</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="injury_knee" name="injuries" value="knee">
+                                <span data-text="injury_knee">Колени</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="injury_neck" name="injuries" value="neck">
+                                <span data-text="injury_neck">Шея</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="injury_hernia" name="injuries" value="hernia">
+                                <span data-text="injury_hernia">Грыжи/протрузии</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="injury_other" name="injuries" value="other">
+                                <span data-text="injury_other">Другое</span>
+                            </label>
                         </div>
                     </div>
-                </div>
 
-                <div class="form-group" id="spinalSections" style="display: none;">
-                    <label data-text="spinal_sections_label">Отделы позвоночника</label>
-                    <div class="checkbox-group">
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="spine_cervical" name="spinal_sections">
-                            <label for="spine_cervical" data-text="spine_cervical">Шейный</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="spine_thoracic" name="spinal_sections">
-                            <label for="spine_thoracic" data-text="spine_thoracic">Грудной</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="spine_lumbar" name="spinal_sections">
-                            <label for="spine_lumbar" data-text="spine_lumbar">Поясничный</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="spine_sacral" name="spinal_sections">
-                            <label for="spine_sacral" data-text="spine_sacral">Крестцовый</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="spine_coccygeal" name="spinal_sections">
-                            <label for="spine_coccygeal" data-text="spine_coccygeal">Копчиковый</label>
-                        </div>
+                    <div class="form-group" id="otherInjuryField" style="display: none;">
+                        <label for="otherInjuryText" data-text="other_injury_label">Опишите другие травмы</label>
+                        <textarea id="otherInjuryText" placeholder="Подробно опишите травмы или особенности здоровья"></textarea>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label data-text="medical_label">Грыжи, протрузии</label>
-                    <textarea id="medicalIssues" data-placeholder="medical_placeholder"></textarea>
-                </div>
+                    <div class="form-group">
+                        <label for="medicalIssues" data-text="medical_label">Дополнительные медицинские особенности</label>
+                        <textarea id="medicalIssues" placeholder="Другие важные детали о вашем здоровье"></textarea>
+                    </div>
 
-                <button class="btn" onclick="saveRegistration()" data-text="create_profile_btn">Создать профиль</button>
+                    <button type="submit" class="btn" data-text="create_profile_btn">Создать профиль</button>
+                </form>
             </div>
-        </div>
+        </section>
 
-        <!-- Экран записи на занятие -->
-        <div id="booking" class="screen">
+        <!-- Booking Screen -->
+        <section id="booking" class="screen active">
             <div class="card">
-                <h2 data-text="booking_title">Запись на занятие</h2>
+                <h2 data-text="booking_title">Запись на индивидуальное занятие</h2>
                 
-                <!-- Индикатор часового пояса -->
+                <!-- Timezone Info -->
                 <div class="timezone-info">
                     <div class="timezone-indicator">
                         <span class="timezone-icon">🌍</span>
@@ -865,134 +821,121 @@
                         <strong id="userTimezone">Loading...</strong>
                     </div>
                     <div class="timezone-note">
-                        <small data-text="timezone_note">Время отображается в вашем локальном времени</small>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label data-text="select_date_label">Выберите дату</label>
-                    <div class="schedule-grid" id="dateGrid">
-                        <!-- Даты будут сгенерированы JS -->
+                        <small data-text="timezone_note">Время показано в вашем местном часовом поясе. Занятия проводятся по московскому времени.</small>
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label data-text="select_time_label">Выберите время</label>
-                    <div class="time-slots">
-                        <div class="time-slot" onclick="selectTime(this)" data-moscow-time="10:00">
-                            <div class="local-time" id="time-10">10:00</div>
-                            <div class="moscow-time" id="moscow-10" style="display: none;">10:00 МСК</div>
-                            <div class="trainer-note" data-text="morning_practice">Утренняя практика</div>
-                        </div>
-                        <div class="time-slot" onclick="selectTime(this)" data-moscow-time="11:00">
-                            <div class="local-time" id="time-11">11:00</div>
-                            <div class="moscow-time" id="moscow-11" style="display: none;">11:00 МСК</div>
-                            <div class="trainer-note" data-text="morning_practice">Утренняя практика</div>
-                        </div>
-                        <div class="time-slot" onclick="selectTime(this)" data-moscow-time="20:00">
-                            <div class="local-time" id="time-20">20:00</div>
-                            <div class="moscow-time" id="moscow-20" style="display: none;">20:00 МСК</div>
-                            <div class="trainer-note" data-text="evening_practice">Вечерняя практика</div>
-                        </div>
-                        <div class="time-slot" onclick="selectTime(this)" data-moscow-time="21:00">
-                            <div class="local-time" id="time-21">21:00</div>
-                            <div class="moscow-time" id="moscow-21" style="display: none;">21:00 МСК</div>
-                            <div class="trainer-note" data-text="evening_practice">Вечерняя практика</div>
-                        </div>
+                <!-- My Bookings Section -->
+                <div class="my-bookings-section">
+                    <h3 data-text="my_bookings">Мои записи</h3>
+                    <div class="booking-cards" id="bookingCards">
+                        <!-- Booking cards will be generated here -->
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label data-text="practice_type_label">Тип практики</label>
-                    <select id="practiceType">
-                        <option value="hatha" data-text="practice_hatha">Хатха йога</option>
-                        <option value="vinyasa" data-text="practice_vinyasa">Виньяса флоу</option>
-                        <option value="restorative" data-text="practice_restorative">Восстановительная</option>
-                        <option value="therapy" data-text="practice_therapy">Йога-терапия</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label data-text="intensity_label">Желаемая интенсивность</label>
-                    <div class="slider-group">
-                        <input type="range" id="intensitySlider" class="slider" min="1" max="5" value="3">
-                        <div class="slider-labels">
-                            <span data-text="intensity_low">Очень мягко</span>
-                            <span data-text="intensity_medium">Средне</span>
-                            <span data-text="intensity_high">Интенсивно</span>
+                <!-- New Booking Section -->
+                <div class="new-booking-section">
+                    <h3 data-text="book_new_class">Записаться на занятие</h3>
+                    
+                    <div class="form-group">
+                        <label data-text="select_date_label">Выберите дату</label>
+                        <div class="schedule-grid" id="dateGrid">
+                            <!-- Dates will be generated by JS -->
                         </div>
                     </div>
-                </div>
 
-                <button class="btn" onclick="bookClass()" data-text="book_class_btn">Записаться на занятие</button>
+                    <div class="form-group">
+                        <label data-text="select_time_label">Выберите время</label>
+                        <div class="time-slots" id="timeSlots">
+                            <!-- Time slots will be generated by JS -->
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label data-text="intensity_label">Желаемая интенсивность</label>
+                        <div class="slider-group">
+                            <input type="range" id="intensitySlider" class="slider" min="1" max="5" value="3">
+                            <div class="slider-labels">
+                                <span data-text="intensity_low">Очень мягко</span>
+                                <span data-text="intensity_medium">Средне</span>
+                                <span data-text="intensity_high">Интенсивно</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn" onclick="bookClass()" data-text="book_class_btn">Записаться на занятие</button>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Экран дневника состояния -->
-        <div id="diary" class="screen">
+        <!-- Diary Screen -->
+        <section id="diary" class="screen">
             <div class="card">
                 <h2 data-text="diary_title">Дневник состояния</h2>
                 <p style="color: #666; margin-bottom: 20px;" data-text="diary_subtitle">Заполните перед занятием</p>
 
-                <div class="form-group">
-                    <label data-text="menstruation_label">Менструальный цикл</label>
-                    <div style="display: flex; gap: 15px; align-items: center;">
-                        <label style="display: flex; align-items: center; gap: 5px;">
-                            <input type="radio" name="menstruation" value="no"> <span data-text="no">Нет</span>
-                        </label>
-                        <label style="display: flex; align-items: center; gap: 5px;">
-                            <input type="radio" name="menstruation" value="yes"> <span data-text="yes">Да</span>
-                        </label>
-                        <input type="number" id="cycleDay" data-placeholder="cycle_day_placeholder" min="1" max="40" style="width: 120px;">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label data-text="energy_level_label">Уровень энергии</label>
-                    <div class="slider-group">
-                        <input type="range" id="energySlider" class="slider" min="1" max="5" value="3">
-                        <div class="slider-labels">
-                            <span data-text="energy_low">Очень устала</span>
-                            <span data-text="energy_normal">Норма</span>
-                            <span data-text="energy_high">Полна сил</span>
+                <form id="diaryForm">
+                    <div class="form-group">
+                        <label data-text="menstruation_label">Менструальный цикл</label>
+                        <div style="display: flex; gap: 15px; align-items: center; flex-wrap: wrap;">
+                            <label style="display: flex; align-items: center; gap: 5px;">
+                                <input type="radio" name="menstruation" value="no"> <span data-text="no">Нет</span>
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 5px;">
+                                <input type="radio" name="menstruation" value="yes"> <span data-text="yes">Да</span>
+                            </label>
+                            <input type="number" id="cycleDay" placeholder="День цикла" min="1" max="40" style="width: 120px; min-width: 100px;">
                         </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label data-text="pain_label">Боли и дискомфорт</label>
-                    <div class="checkbox-group">
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="pain_head">
-                            <label for="pain_head" data-text="pain_head">Головная боль</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="pain_back">
-                            <label for="pain_back" data-text="pain_back">Боль в спине</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="pain_knee">
-                            <label for="pain_knee" data-text="pain_knee">Боль в коленях</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="pain_neck">
-                            <label for="pain_neck" data-text="pain_neck">Напряжение в шее</label>
+                    <div class="form-group">
+                        <label data-text="energy_level_label">Уровень энергии</label>
+                        <div class="slider-group">
+                            <input type="range" id="energySlider" class="slider" min="1" max="5" value="3">
+                            <div class="slider-labels">
+                                <span data-text="energy_low">Очень устала</span>
+                                <span data-text="energy_normal">Норма</span>
+                                <span data-text="energy_high">Полна сил</span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label data-text="wishes_label">Особые пожелания на сегодня</label>
-                    <textarea id="todayWishes" data-placeholder="wishes_placeholder"></textarea>
-                </div>
+                    <div class="form-group">
+                        <label data-text="pain_label">Боли и дискомфорт</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="pain_head" name="pains" value="head">
+                                <span data-text="pain_head">Головная боль</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="pain_back" name="pains" value="back">
+                                <span data-text="pain_back">Боль в спине</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="pain_knee" name="pains" value="knee">
+                                <span data-text="pain_knee">Боль в коленях</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="pain_neck" name="pains" value="neck">
+                                <span data-text="pain_neck">Напряжение в шее</span>
+                            </label>
+                        </div>
+                    </div>
 
-                <button class="btn" onclick="saveDiary()" data-text="save_btn">Сохранить</button>
+                    <div class="form-group">
+                        <label for="todayWishes" data-text="wishes_label">Особые пожелания на сегодня</label>
+                        <textarea id="todayWishes" placeholder="Что хотели бы проработать сегодня?"></textarea>
+                    </div>
+
+                    <button type="button" class="btn" onclick="saveDiary()" data-text="save_btn">Сохранить</button>
+                </form>
                 
+                <!-- Post-practice feedback -->
                 <div style="margin-top: 30px; padding-top: 20px; border-top: 2px solid #e0e0e0;">
                     <h3 data-text="after_practice_title">После занятия</h3>
                     
                     <div class="form-group">
-                        <label data-text="after_feeling_label">Самочувствие после практики</label>
+                        <label for="afterFeeling" data-text="after_feeling_label">Самочувствие после практики</label>
                         <select id="afterFeeling">
                             <option value="" data-text="select_option">Выберите...</option>
                             <option value="better" data-text="feeling_better">Стало лучше</option>
@@ -1002,7 +945,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label data-text="complexity_label">Сложность практики</label>
+                        <label for="practiceComplexity" data-text="complexity_label">Сложность практики</label>
                         <select id="practiceComplexity">
                             <option value="" data-text="select_option">Выберите...</option>
                             <option value="easy" data-text="complexity_easy">Легко</option>
@@ -1011,150 +954,118 @@
                         </select>
                     </div>
 
-                    <button class="btn btn-secondary" onclick="savePostPractice()" data-text="save_feedback_btn">Сохранить отзыв</button>
+                    <button type="button" class="btn btn-secondary" onclick="savePostPractice()" data-text="save_feedback_btn">Сохранить отзыв</button>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Кабинет тренера -->
-        <div id="trainer" class="screen">
+        <!-- Trainer Dashboard -->
+        <section id="trainer" class="screen">
             <div class="dashboard-grid">
                 <div class="card">
                     <h3 data-text="today_stats_title">Статистика сегодня</h3>
                     <div class="stats-card">
-                        <div class="stats-number">5</div>
+                        <div class="stats-number" id="todayClassesCount">5</div>
                         <div data-text="classes_scheduled">Занятий запланировано</div>
                     </div>
                 </div>
 
                 <div class="card">
                     <h3 data-text="attention_clients_title">Клиенты требующие внимания</h3>
-                    <div class="client-list">
-                        <div class="client-item">
-                            <div class="client-info">
-                                <h4>Anna Smith</h4>
-                                <p><span data-text="class_at">Занятие в</span> 18:00 • <span data-text="back_pain">Боль в спине</span> • <span data-text="cycle_day">День цикла</span> 2</p>
-                            </div>
-                            <span class="status-indicator status-attention" data-text="status_attention">Внимание</span>
-                        </div>
-                        <div class="client-item">
-                            <div class="client-info">
-                                <h4>Maria Johnson</h4>
-                                <p><span data-text="class_at">Занятие в</span> 20:00 • <span data-text="low_energy">Низкая энергия</span> • <span data-text="headache">Головная боль</span></p>
-                            </div>
-                            <span class="status-indicator status-concern" data-text="status_careful">Осторожно</span>
-                        </div>
-                        <div class="client-item">
-                            <div class="client-info">
-                                <h4>Elena Davis</h4>
-                                <p><span data-text="class_at">Занятие в</span> 9:00 • <span data-text="good_condition">Хорошее состояние</span></p>
-                            </div>
-                            <span class="status-indicator status-good" data-text="status_normal">Норма</span>
-                        </div>
+                    <div class="client-list" id="attentionClientsList">
+                        <!-- Client list will be generated here -->
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="card">
-                <h3 data-text="client_details_title">Детали клиента</h3>
-                <select id="clientSelect" onchange="showClientDetails()">
-                    <option value="" data-text="select_client">Выберите клиента...</option>
-                    <option value="anna">Anna Smith</option>
-                    <option value="maria">Maria Johnson</option>
-                    <option value="elena">Elena Davis</option>
-                </select>
-                
-                <div id="clientDetails" class="hidden" style="margin-top: 20px;">
-                    <h4 data-text="recent_classes_title">История последних занятий</h4>
-                    <div style="background: #f8f9ff; padding: 15px; border-radius: 8px; margin-top: 10px;">
-                        <p><strong data-text="yesterday">Вчера:</strong> <span data-text="yesterday_details">Энергия 4/5, без болей, просила растяжку плеч</span></p>
-                        <p><strong data-text="three_days_ago">3 дня назад:</strong> <span data-text="three_days_details">Энергия 2/5, боль в пояснице, мягкая практика</span></p>
-                        <p><strong data-text="week_ago">Неделю назад:</strong> <span data-text="week_details">Энергия 5/5, активная виньяса</span></p>
-                    </div>
-                    
-                    <h4 style="margin-top: 20px;" data-text="system_recommendations_title">Рекомендации системы</h4>
-                    <div style="background: #fff3cd; padding: 15px; border-radius: 8px; margin-top: 10px;">
-                        <p>💡 <span data-text="recommendation_1">Клиент показывает стабильный прогресс в гибкости</span></p>
-                        <p>⚠️ <span data-text="recommendation_2">Обратите внимание на частые боли в пояснице - рекомендуется больше укрепляющих асан для кора</span></p>
-                        <p>✅ <span data-text="recommendation_3">Оптимальная интенсивность для клиента: 3-4 уровень</span></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Экран аналитики -->
-        <div id="analytics" class="screen">
+        <!-- Analytics Screen -->
+        <section id="analytics" class="screen">
             <div class="card">
                 <h2 data-text="analytics_title">Аналитика прогресса</h2>
                 
                 <div class="form-group">
-                    <label data-text="select_client_analytics">Выберите клиента</label>
+                    <label for="analyticsClient" data-text="select_client_analytics">Выберите клиента</label>
                     <select id="analyticsClient">
-                        <option value="anna">Anna Smith</option>
-                        <option value="maria">Maria Johnson</option>
-                        <option value="elena">Elena Davis</option>
+                        <!-- Options will be populated by JS -->
                     </select>
                 </div>
 
-                <div class="progress-chart">
+                <div class="progress-chart" id="progressChart">
                     <div style="text-align: center;">
                         <h3 data-text="progress_chart_title">График прогресса</h3>
                         <p data-text="progress_chart_subtitle">Уровень энергии и сложность практики за последний месяц</p>
-                        <br>
-                        <div style="display: flex; justify-content: space-around; margin-top: 20px;">
-                            <div>
-                                <div style="background: #667eea; color: white; padding: 20px; border-radius: 10px;">
-                                    <div style="font-size: 24px; font-weight: bold;">+15%</div>
-                                    <div data-text="flexibility_progress">Прогресс гибкости</div>
-                                </div>
-                            </div>
-                            <div>
-                                <div style="background: #52c41a; color: white; padding: 20px; border-radius: 10px;">
-                                    <div style="font-size: 24px; font-weight: bold;">3.8/5</div>
-                                    <div data-text="average_energy">Средняя энергия</div>
-                                </div>
-                            </div>
-                            <div>
-                                <div style="background: #fa8c16; color: white; padding: 20px; border-radius: 10px;">
-                                    <div style="font-size: 24px; font-weight: bold;">12</div>
-                                    <div data-text="classes_per_month">Занятий в месяц</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="margin-top: 30px;">
-                    <h3 data-text="key_insights_title">Ключевые инсайты</h3>
-                    <div style="background: #f8f9ff; padding: 20px; border-radius: 10px; margin-top: 15px;">
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="margin-bottom: 10px;">📈 <strong data-text="insight_progress_title">Прогресс:</strong> <span data-text="insight_progress_text">Клиент стабильно увеличивает интенсивность занятий</span></li>
-                            <li style="margin-bottom: 10px;">🔄 <strong data-text="insight_pattern_title">Паттерн:</strong> <span data-text="insight_pattern_text">Лучше всего занимается утром (энергия выше на 20%)</span></li>
-                            <li style="margin-bottom: 10px;">⚠️ <strong data-text="insight_attention_title">Внимание:</strong> <span data-text="insight_attention_text">Боли в спине коррелируют с менструальным циклом</span></li>
-                            <li style="margin-bottom: 10px;">✅ <strong data-text="insight_recommendation_title">Рекомендация:</strong> <span data-text="insight_recommendation_text">Увеличить долю восстановительных практик</span></li>
-                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Profile Screen -->
+        <section id="profile" class="screen">
+            <div class="card">
+                <h2 data-text="profile_title">Профиль пользователя</h2>
+                
+                <form id="profileForm">
+                    <!-- Profile form fields will be similar to registration -->
+                </form>
+                
+                <div style="margin-top: 30px; padding-top: 20px; border-top: 2px solid #e0e0e0;">
+                    <button class="btn btn-secondary" onclick="signOut()" data-text="sign_out_btn">Выйти из системы</button>
+                </div>
+            </div>
+        </section>
     </div>
 
+    <!-- Footer -->
+    <footer style="margin-top: 60px; padding: 30px 0; text-align: center; color: rgba(255,255,255,0.8);">
+        <div class="container">
+            <p>&copy; 2024 Sova Yoga - Anna Belousova. <span data-text="footer_rights">Все права защищены.</span></p>
+            <div style="margin-top: 15px;">
+                <a href="https://wa.me/46702129793" style="color: rgba(255,255,255,0.8); margin: 0 10px;">📱 WhatsApp</a>
+                <a href="https://instagram.com/sova.yoga" style="color: rgba(255,255,255,0.8); margin: 0 10px;">📸 Instagram</a>
+                <a href="tel:+46702129793" style="color: rgba(255,255,255,0.8); margin: 0 10px;">📞 +46 70 212 97 93</a>
+            </div>
+            <div style="margin-top: 10px; font-size: 14px;">
+                <span data-text="anna_description">Сертифицированный инструктор йоги в Стокгольме</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PWA Install Button -->
+    <button id="installButton" style="display: none; position: fixed; bottom: 20px; right: 20px; background: var(--primary-color); color: white; border: none; padding: 15px; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.3); cursor: pointer;">
+        📱
+    </button>
+
+    <!-- Messages -->
+    <div id="successMessage" class="message success">✅ Операция выполнена успешно!</div>
+    <div id="errorMessage" class="message error">❌ Произошла ошибка. Попробуйте еще раз.</div>
+    <div id="infoMessage" class="message info">ℹ️ Информационное сообщение</div>
+
+    <!-- ВСТРОЕННЫЙ JAVASCRIPT -->
     <script>
-        // Переводы
+        console.log('Конфигурация Sova Yoga готова (Anna Belousova)');
+
+        // Переводы для двух языков
         const translations = {
             ru: {
                 title: "Sova Yoga",
-                subtitle: "Персонализированная йога практика",
-                tab_registration: "Регистрация",
+                subtitle: "Персонализированная йога практика с Анной Белоусовой",
+                tab_auth: "Вход",
+                tab_registration: "Регистрация", 
                 tab_booking: "Запись на занятие",
                 tab_diary: "Дневник состояния",
                 tab_trainer: "Кабинет тренера",
                 tab_analytics: "Аналитика",
+                tab_profile: "Профиль",
+                auth_title: "Вход в систему",
+                email_label: "Email",
+                password_label: "Пароль", 
+                sign_in_btn: "Войти",
+                sign_up_link: "Регистрация",
+                forgot_password: "Забыли пароль?",
                 welcome_title: "Добро пожаловать! Расскажите о себе",
                 name_label: "Имя",
-                name_placeholder: "Ваше имя",
-                email_label: "Email",
-                email_placeholder: "your@email.com",
+                confirm_password_label: "Подтвердите пароль",
                 level_label: "Уровень подготовки",
                 level_beginner: "Новичок (менее 3 месяцев)",
                 level_elementary: "Начальный (3-12 месяцев)",
@@ -1166,46 +1077,20 @@
                 goal_relaxation: "Расслабление",
                 goal_therapy: "Терапия",
                 injuries_label: "Травмы в анамнезе",
-                injury_back: "Спина",
                 injury_knee: "Колени",
                 injury_neck: "Шея",
-                injury_hernia: "Грыжа/протрузия",
-                spinal_sections_label: "Отделы позвоночника",
-                spine_cervical: "Шейный",
-                spine_thoracic: "Грудной", 
-                spine_lumbar: "Поясничный",
-                spine_sacral: "Крестцовый",
-                spine_coccygeal: "Копчиковый",
-                medical_label: "Грыжи, протрузии",
-                medical_placeholder: "Опишите подробно, если есть",
+                injury_hernia: "Грыжи/протрузии",
+                injury_other: "Другое",
+                other_injury_label: "Опишите другие травмы",
+                medical_label: "Дополнительные медицинские особенности",
                 create_profile_btn: "Создать профиль",
-                booking_title: "Запись на занятие",
-                select_date_label: "Выберите дату",
-                select_time_label: "Выберите время",
+                booking_title: "Запись на индивидуальное занятие",
                 your_timezone: "Ваш часовой пояс:",
-                timezone_note: "Время отображается в вашем локальном времени",
-                moscow_time_label: "МСК",
+                timezone_note: "Время показано в вашем местном часовом поясе. Занятия проводятся по московскому времени.",
                 my_bookings: "Мои записи",
                 book_new_class: "Записаться на занятие",
-                all_classes: "Все",
-                individual_classes: "Индивидуальные",
-                group_classes: "Групповые",
-                cancel_booking: "Отменить",
-                reschedule_booking: "Перенести",
-                full_class: "Занятие заполнено",
-                join_waiting_list: "Лист ожидания",
-                individual: "Индивидуальное",
-                group: "Группа",
-                participants_count: "участников",
-                regular_client: "Постоянный клиент",
-                priority_booking: "Приоритетная запись"
-                morning_practice: "Утренняя практика",
-                evening_practice: "Вечерняя практика",
-                practice_type_label: "Тип практики",
-                practice_hatha: "Хатха йога",
-                practice_vinyasa: "Виньяса флоу",
-                practice_restorative: "Восстановительная",
-                practice_therapy: "Йога-терапия",
+                select_date_label: "Выберите дату",
+                select_time_label: "Выберите время",
                 intensity_label: "Желаемая интенсивность",
                 intensity_low: "Очень мягко",
                 intensity_medium: "Средне",
@@ -1216,7 +1101,6 @@
                 menstruation_label: "Менструальный цикл",
                 no: "Нет",
                 yes: "Да",
-                cycle_day_placeholder: "День цикла",
                 energy_level_label: "Уровень энергии",
                 energy_low: "Очень устала",
                 energy_normal: "Норма",
@@ -1227,7 +1111,6 @@
                 pain_knee: "Боль в коленях",
                 pain_neck: "Напряжение в шее",
                 wishes_label: "Особые пожелания на сегодня",
-                wishes_placeholder: "Хочу поработать с грудным отделом, растянуть поясницу...",
                 save_btn: "Сохранить",
                 after_practice_title: "После занятия",
                 after_feeling_label: "Самочувствие после практики",
@@ -1243,58 +1126,34 @@
                 today_stats_title: "Статистика сегодня",
                 classes_scheduled: "Занятий запланировано",
                 attention_clients_title: "Клиенты требующие внимания",
-                class_at: "Занятие в",
-                back_pain: "Боль в спине",
-                cycle_day: "День цикла",
-                low_energy: "Низкая энергия",
-                headache: "Головная боль",
-                good_condition: "Хорошее состояние",
-                status_attention: "Внимание",
-                status_careful: "Осторожно",
-                status_normal: "Норма",
-                client_details_title: "Детали клиента",
-                select_client: "Выберите клиента...",
-                recent_classes_title: "История последних занятий",
-                yesterday: "Вчера:",
-                yesterday_details: "Энергия 4/5, без болей, просила растяжку плеч",
-                three_days_ago: "3 дня назад:",
-                three_days_details: "Энергия 2/5, боль в пояснице, мягкая практика",
-                week_ago: "Неделю назад:",
-                week_details: "Энергия 5/5, активная виньяса",
-                system_recommendations_title: "Рекомендации системы",
-                recommendation_1: "Клиент показывает стабильный прогресс в гибкости",
-                recommendation_2: "Обратите внимание на частые боли в пояснице - рекомендуется больше укрепляющих асан для кора",
-                recommendation_3: "Оптимальная интенсивность для клиента: 3-4 уровень",
                 analytics_title: "Аналитика прогресса",
                 select_client_analytics: "Выберите клиента",
                 progress_chart_title: "График прогресса",
                 progress_chart_subtitle: "Уровень энергии и сложность практики за последний месяц",
-                flexibility_progress: "Прогресс гибкости",
-                average_energy: "Средняя энергия",
-                classes_per_month: "Занятий в месяц",
-                key_insights_title: "Ключевые инсайты",
-                insight_progress_title: "Прогресс:",
-                insight_progress_text: "Клиент стабильно увеличивает интенсивность занятий",
-                insight_pattern_title: "Паттерн:",
-                insight_pattern_text: "Лучше всего занимается утром (энергия выше на 20%)",
-                insight_attention_title: "Внимание:",
-                insight_attention_text: "Боли в спине коррелируют с менструальным циклом",
-                insight_recommendation_title: "Рекомендация:",
-                insight_recommendation_text: "Увеличить долю восстановительных практик"
+                profile_title: "Профиль пользователя",
+                sign_out_btn: "Выйти из системы",
+                footer_rights: "Все права защищены.",
+                anna_description: "Сертифицированный инструктор йоги в Стокгольме"
             },
             en: {
                 title: "Sova Yoga",
-                subtitle: "Personalized yoga practice",
+                subtitle: "Personalized yoga practice with Anna Belousova",
+                tab_auth: "Login",
                 tab_registration: "Registration",
                 tab_booking: "Book a class",
-                tab_diary: "State diary",
-                tab_trainer: "Trainer cabinet",
+                tab_diary: "Health diary",
+                tab_trainer: "Trainer dashboard",
                 tab_analytics: "Analytics",
+                tab_profile: "Profile",
+                auth_title: "Login to system",
+                email_label: "Email",
+                password_label: "Password",
+                sign_in_btn: "Sign In",
+                sign_up_link: "Registration",
+                forgot_password: "Forgot password?",
                 welcome_title: "Welcome! Tell us about yourself",
                 name_label: "Name",
-                name_placeholder: "Your name",
-                email_label: "Email",
-                email_placeholder: "your@email.com",
+                confirm_password_label: "Confirm password",
                 level_label: "Experience level",
                 level_beginner: "Beginner (less than 3 months)",
                 level_elementary: "Elementary (3-12 months)",
@@ -1305,58 +1164,31 @@
                 goal_strength: "Strength",
                 goal_relaxation: "Relaxation",
                 goal_therapy: "Therapy",
-                injuries_label: "Previous injuries",
-                injury_back: "Back",
+                injuries_label: "Medical history of injuries",
                 injury_knee: "Knees",
                 injury_neck: "Neck",
-                injury_hernia: "Hernia/protrusion",
-                spinal_sections_label: "Spinal sections",
-                spine_cervical: "Cervical",
-                spine_thoracic: "Thoracic",
-                spine_lumbar: "Lumbar", 
-                spine_sacral: "Sacral",
-                spine_coccygeal: "Coccygeal",
-                medical_label: "Hernias, protrusions",
-                medical_placeholder: "Please describe in detail if any",
+                injury_hernia: "Hernias/protrusions",
+                injury_other: "Other",
+                other_injury_label: "Describe other injuries",
+                medical_label: "Additional medical features",
                 create_profile_btn: "Create profile",
-                booking_title: "Book a class",
+                booking_title: "Book individual class",
+                your_timezone: "Your timezone:",
+                timezone_note: "Time is shown in your local timezone. Classes are conducted in Moscow time.",
+                my_bookings: "My bookings",
+                book_new_class: "Book a class",
                 select_date_label: "Select date",
                 select_time_label: "Select time",
-                your_timezone: "Your timezone:",
-                timezone_note: "Time is displayed in your local time",
-                moscow_time_label: "MSK",
-                my_bookings: "My Bookings",
-                book_new_class: "Book New Class",
-                all_classes: "All",
-                individual_classes: "Individual",
-                group_classes: "Group",
-                cancel_booking: "Cancel",
-                reschedule_booking: "Reschedule",
-                full_class: "Class is full",
-                join_waiting_list: "Waiting List",
-                individual: "Individual",
-                group: "Group",
-                participants_count: "participants",
-                regular_client: "Regular Client",
-                priority_booking: "Priority Booking"
-                morning_practice: "Morning practice",
-                evening_practice: "Evening practice",
-                practice_type_label: "Practice type",
-                practice_hatha: "Hatha yoga",
-                practice_vinyasa: "Vinyasa flow",
-                practice_restorative: "Restorative",
-                practice_therapy: "Yoga therapy",
                 intensity_label: "Desired intensity",
                 intensity_low: "Very gentle",
                 intensity_medium: "Medium",
-                intensity_high: "Intensive",
-                book_class_btn: "Book a class",
-                diary_title: "State diary",
-                diary_subtitle: "Fill before class",
+                intensity_high: "Intense",
+                book_class_btn: "Book class",
+                diary_title: "Health diary",
+                diary_subtitle: "Fill out before class",
                 menstruation_label: "Menstrual cycle",
                 no: "No",
                 yes: "Yes",
-                cycle_day_placeholder: "Cycle day",
                 energy_level_label: "Energy level",
                 energy_low: "Very tired",
                 energy_normal: "Normal",
@@ -1366,14 +1198,13 @@
                 pain_back: "Back pain",
                 pain_knee: "Knee pain",
                 pain_neck: "Neck tension",
-                wishes_label: "Special requests for today",
-                wishes_placeholder: "Want to work on chest area, stretch lower back...",
+                wishes_label: "Special wishes for today",
                 save_btn: "Save",
-                after_practice_title: "After class",
+                after_practice_title: "After practice",
                 after_feeling_label: "How do you feel after practice",
-                select_option: "Choose...",
+                select_option: "Select...",
                 feeling_better: "Feel better",
-                feeling_same: "No change",
+                feeling_same: "No changes",
                 feeling_worse: "Feel worse",
                 complexity_label: "Practice complexity",
                 complexity_easy: "Easy",
@@ -1383,603 +1214,505 @@
                 today_stats_title: "Today's statistics",
                 classes_scheduled: "Classes scheduled",
                 attention_clients_title: "Clients requiring attention",
-                class_at: "Class at",
-                back_pain: "Back pain",
-                cycle_day: "Cycle day",
-                low_energy: "Low energy",
-                headache: "Headache",
-                good_condition: "Good condition",
-                status_attention: "Attention",
-                status_careful: "Careful",
-                status_normal: "Normal",
-                client_details_title: "Client details",
-                select_client: "Select client...",
-                recent_classes_title: "Recent classes history",
-                yesterday: "Yesterday:",
-                yesterday_details: "Energy 4/5, no pain, requested shoulder stretches",
-                three_days_ago: "3 days ago:",
-                three_days_details: "Energy 2/5, lower back pain, gentle practice",
-                week_ago: "A week ago:",
-                week_details: "Energy 5/5, active vinyasa",
-                system_recommendations_title: "System recommendations",
-                recommendation_1: "Client shows steady progress in flexibility",
-                recommendation_2: "Pay attention to frequent lower back pain - recommend more core strengthening asanas",
-                recommendation_3: "Optimal intensity for client: level 3-4",
                 analytics_title: "Progress analytics",
                 select_client_analytics: "Select client",
                 progress_chart_title: "Progress chart",
-                progress_chart_subtitle: "Energy level and practice complexity over the last month",
-                flexibility_progress: "Flexibility progress",
-                average_energy: "Average energy",
-                classes_per_month: "Classes per month",
-                key_insights_title: "Key insights",
-                insight_progress_title: "Progress:",
-                insight_progress_text: "Client steadily increases practice intensity",
-                insight_pattern_title: "Pattern:",
-                insight_pattern_text: "Performs best in the morning (20% higher energy)",
-                insight_attention_title: "Attention:",
-                insight_attention_text: "Back pain correlates with menstrual cycle",
-                insight_recommendation_title: "Recommendation:",
-                insight_recommendation_text: "Increase proportion of restorative practices"
+                progress_chart_subtitle: "Energy level and practice complexity for the last month",
+                profile_title: "User profile",
+                sign_out_btn: "Sign out",
+                footer_rights: "All rights reserved.",
+                anna_description: "Certified yoga instructor in Stockholm"
             }
         };
 
-        // Текущий язык
+        // Глобальные переменные
+        let currentUser = null;
         let currentLanguage = 'ru';
+        let selectedDate = null;
+        let selectedTime = null;
 
-        // Данные приложения
-        let userData = {};
-        let bookings = [];
-        let diaryEntries = [];
-        let userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-        let selectedClassType = 'all';
+        // Инициализация приложения
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeApp();
+        });
 
-        // Примеры данных для демонстрации
-        const demoBookings = [
-            {
-                id: 1,
-                type: 'individual',
-                date: '2024-06-17',
-                time: '10:00',
-                isRegular: true,
-                schedule: 'Понедельник, Среда, Пятница 10:00'
-            },
-            {
-                id: 2,
-                type: 'group',
-                date: '2024-06-18',
-                time: '20:00',
-                isRegular: true,
-                schedule: 'Вторник, Четверг 20:00'
-            },
-            {
-                id: 3,
-                type: 'individual',
-                date: '2024-06-20',
-                time: '11:00',
-                isRegular: false
-            }
-        ];
-
-        const demoTimeSlots = [
-            {
-                moscowTime: '10:00',
-                type: 'individual',
-                maxParticipants: 1,
-                currentParticipants: 0,
-                hasPriority: true // для постоянных клиентов
-            },
-            {
-                moscowTime: '11:00',
-                type: 'group',
-                maxParticipants: 6,
-                currentParticipants: 4
-            },
-            {
-                moscowTime: '20:00',
-                type: 'group',
-                maxParticipants: 6,
-                currentParticipants: 6
-            },
-            {
-                moscowTime: '21:00',
-                type: 'individual',
-                maxParticipants: 1,
-                currentParticipants: 0
-            }
-        ];
-
-        // Генерация карточек записей
-        function generateBookingCards() {
-            const container = document.getElementById('bookingCards');
-            container.innerHTML = '';
-
-            if (demoBookings.length === 0) {
-                container.innerHTML = `
-                    <div style="text-align: center; color: #666; padding: 20px;">
-                        <p data-text="no_bookings">У вас пока нет записей</p>
-                    </div>
-                `;
-                return;
-            }
-
-            demoBookings.forEach(booking => {
-                const card = document.createElement('div');
-                card.className = 'booking-card';
-                
-                const typeText = booking.type === 'individual' 
-                    ? translations[currentLanguage]['individual_classes']
-                    : translations[currentLanguage]['group_classes'];
-                
-                const dateText = new Date(booking.date).toLocaleDateString('ru-RU', {
-                    weekday: 'long',
-                    month: 'long',
-                    day: 'numeric'
-                });
-
-                const localDate = convertMoscowTimeToLocal(booking.time);
-                const localTime = formatTimeForDisplay(localDate);
-                
-                const cancelText = translations[currentLanguage]['cancel_booking'];
-                const rescheduleText = translations[currentLanguage]['reschedule_booking'];
-                const regularText = translations[currentLanguage]['regular_client'];
-
-                let regularBadge = '';
-                let scheduleInfo = '';
-                
-                if (booking.isRegular) {
-                    regularBadge = `<div class="regular-badge">${regularText}</div>`;
-                    scheduleInfo = `<div class="schedule">${booking.schedule}</div>`;
-                }
-
-                card.innerHTML = `
-                    <h4>${typeText}</h4>
-                    ${regularBadge}
-                    <div class="class-info">${dateText} в ${localTime}</div>
-                    ${scheduleInfo}
-                    <div class="booking-actions">
-                        <button class="btn-small-white" onclick="rescheduleBooking(${booking.id})">${rescheduleText}</button>
-                        <button class="btn-small-white" onclick="cancelBooking(${booking.id})">${cancelText}</button>
-                    </div>
-                `;
-                
-                container.appendChild(card);
-            });
-        }
-
-        // Фильтрация классов по типу
-        function filterClasses(type) {
-            selectedClassType = type;
+        function initializeApp() {
+            console.log('Инициализация приложения...');
             
-            // Обновляем активную кнопку фильтра
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            event.target.classList.add('active');
+            // Установка часового пояса
+            updateTimezone();
             
-            // Обновляем отображение слотов времени
+            // Генерация дат и времени
+            generateDateGrid();
             generateTimeSlots();
-        }
-
-        // Генерация слотов времени с учетом фильтра
-        function generateTimeSlots() {
-            const container = document.querySelector('#timeSlots');
-            if (!container) return;
             
-            container.innerHTML = '';
+            // Настройка навигации
+            setupNavigation();
             
-            const filteredSlots = demoTimeSlots.filter(slot => {
-                if (selectedClassType === 'all') return true;
-                return slot.type === selectedClassType;
-            });
-
-            filteredSlots.forEach(slot => {
-                const timeSlotElement = document.createElement('div');
-                timeSlotElement.className = 'time-slot';
-                
-                // Добавляем приоритетную метку для постоянных клиентов
-                if (slot.hasPriority) {
-                    const priorityBadge = document.createElement('div');
-                    priorityBadge.className = 'priority-badge';
-                    priorityBadge.textContent = translations[currentLanguage]['priority_booking'] || 'Приоритет';
-                    timeSlotElement.appendChild(priorityBadge);
-                }
-                
-                if (slot.currentParticipants >= slot.maxParticipants) {
-                    timeSlotElement.classList.add('full');
-                } else {
-                    timeSlotElement.onclick = () => selectTimeSlot(timeSlotElement, slot);
-                }
-                timeSlotElement.setAttribute('data-moscow-time', slot.moscowTime);
-                
-                const localDate = convertMoscowTimeToLocal(slot.moscowTime);
-                const localTime = formatTimeForDisplay(localDate);
-                const moscowLabel = translations[currentLanguage]['moscow_time_label'] || 'МСК';
-                const showMoscowTime = localTime !== slot.moscowTime;
-                
-                const typeText = translations[currentLanguage][slot.type] || slot.type;
-                const participantsText = translations[currentLanguage]['participants_count'] || 'участников';
-                
-                let participantsInfo = '';
-                if (slot.type === 'group') {
-                    participantsInfo = `<div class="participants">${slot.currentParticipants}/${slot.maxParticipants} ${participantsText}</div>`;
-                }
-                
-                let actionButton = '';
-                if (slot.currentParticipants >= slot.maxParticipants) {
-                    const waitingListText = translations[currentLanguage]['join_waiting_list'];
-                    actionButton = `<button class="waiting-list-btn" onclick="joinWaitingList('${slot.moscowTime}')">${waitingListText}</button>`;
-                }
-
-                const mainContent = `
-                    <div class="local-time">${localTime}</div>
-                    ${showMoscowTime ? `<div class="moscow-time">${slot.moscowTime} ${moscowLabel}</div>` : ''}
-                    <div class="class-type ${slot.type}">${typeText}</div>
-                    ${participantsInfo}
-                    ${actionButton}
-                `;
-                
-                timeSlotElement.innerHTML = mainContent;
-                container.appendChild(timeSlotElement);
-            });
-        }
-
-        // Выбор временного слота
-        function selectTimeSlot(element, slotData) {
-            document.querySelectorAll('.time-slot').forEach(slot => {
-                slot.classList.remove('selected');
-            });
-            element.classList.add('selected');
-            userData.selectedTime = slotData.moscowTime;
-            userData.selectedSlotData = slotData;
-        }
-
-        // Функции для работы с записями
-        function cancelBooking(bookingId) {
-            const message = currentLanguage === 'ru' 
-                ? 'Запись отменена. Место освобождено для других клиентов.'
-                : 'Booking cancelled. Spot is now available for other clients.';
-            alert(message);
+            // Настройка форм
+            setupForms();
             
-            // Убираем запись из списка (в реальном приложении - обновление с сервера)
-            const index = demoBookings.findIndex(b => b.id === bookingId);
-            if (index > -1) {
-                demoBookings.splice(index, 1);
-                generateBookingCards();
-            }
+            console.log('Приложение инициализировано успешно');
         }
 
-        function rescheduleBooking(bookingId) {
-            const message = currentLanguage === 'ru' 
-                ? 'Функция переноса записи. Здесь откроется календарь для выбора нового времени.'
-                : 'Reschedule function. Calendar will open here to select new time.';
-            alert(message);
-        }
-
-        function joinWaitingList(time) {
-            const message = currentLanguage === 'ru' 
-                ? `Вы добавлены в лист ожидания на ${time}. Уведомим, если освободится место.`
-                : `You've been added to the waiting list for ${time}. We'll notify you if a spot opens up.`;
-            alert(message);
-        }
-
-        // Функция для показа/скрытия отделов позвоночника
-        function toggleSpinalSections() {
-            const herniaCheckbox = document.getElementById('injury_hernia');
-            const spinalSections = document.getElementById('spinalSections');
-            
-            if (herniaCheckbox.checked) {
-                spinalSections.style.display = 'block';
-            } else {
-                spinalSections.style.display = 'none';
-                // Снимаем все галочки с отделов позвоночника
-                document.querySelectorAll('input[name="spinal_sections"]').forEach(checkbox => {
-                    checkbox.checked = false;
-                });
-            }
-        }
-
-        // Обновление отображения часового пояса
-        function updateTimezoneDisplay() {
+        // Обновление часового пояса
+        function updateTimezone() {
+            const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
             const timezoneElement = document.getElementById('userTimezone');
             if (timezoneElement) {
-                const timezoneName = getTimezoneDisplayName(userTimezone);
-                timezoneElement.textContent = timezoneName;
+                timezoneElement.textContent = timezone;
             }
         }
 
-        // Получение читаемого названия часового пояса
-        function getTimezoneDisplayName(timezone) {
-            const now = new Date();
-            const offsetMinutes = now.getTimezoneOffset();
-            const offsetHours = Math.abs(offsetMinutes / 60);
-            const offsetSign = offsetMinutes <= 0 ? '+' : '-';
-            
-            // Попытка получить название города из часового пояса
-            const cityName = timezone.split('/').pop().replace(/_/g, ' ');
-            
-            return `${cityName} (UTC${offsetSign}${offsetHours})`;
-        }
-
-        // Конвертация московского времени в локальное
-        function convertMoscowTimeToLocal(moscowTimeString) {
-            // Создаем дату на сегодня с московским временем
+        // Конвертация московского времени в местное время пользователя
+        function convertMoscowTimeToLocal(moscowTime) {
+            // Создаем дату с московским временем
             const today = new Date();
-            const [hours, minutes] = moscowTimeString.split(':').map(Number);
+            const [hours, minutes] = moscowTime.split(':').map(Number);
             
-            // Создаем московское время (UTC+3)
+            // Создаем дату в московском времени (UTC+3)
             const moscowDate = new Date();
-            moscowDate.setUTCHours(hours - 3, minutes, 0, 0); // -3 часа от UTC для Москвы
+            moscowDate.setUTCHours(hours - 3, minutes, 0, 0); // Московское время = UTC+3
             
-            // Возвращаем в локальном времени пользователя
-            return moscowDate;
+            // Получаем местное время пользователя
+            const localHours = moscowDate.getHours();
+            const localMinutes = moscowDate.getMinutes();
+            
+            return `${localHours.toString().padStart(2, '0')}:${localMinutes.toString().padStart(2, '0')}`;
         }
 
-        // Форматирование времени для отображения
-        function formatTimeForDisplay(date) {
-            return date.toLocaleTimeString([], { 
-                hour: '2-digit', 
-                minute: '2-digit',
-                hour12: false 
-            });
-        }
-
-        // Обновление отображения времени для всех слотов
-        function updateTimeSlots() {
-            const timeSlots = document.querySelectorAll('.time-slot[data-moscow-time]');
+        // Навигация между экранами
+        function setupNavigation() {
+            const tabs = document.querySelectorAll('.tab');
+            const screens = document.querySelectorAll('.screen');
             
-            timeSlots.forEach(slot => {
-                const moscowTime = slot.getAttribute('data-moscow-time');
-                const localDate = convertMoscowTimeToLocal(moscowTime);
-                const localTime = formatTimeForDisplay(localDate);
-                
-                // Находим элементы времени
-                const localTimeElement = slot.querySelector('.local-time');
-                const moscowTimeElement = slot.querySelector('.moscow-time');
-                
-                if (localTimeElement) {
-                    localTimeElement.textContent = localTime;
-                }
-                
-                // Показываем московское время только если оно отличается от локального
-                if (moscowTimeElement) {
-                    const moscowLabel = translations[currentLanguage]['moscow_time_label'] || 'МСК';
-                    if (localTime !== moscowTime) {
-                        moscowTimeElement.textContent = `${moscowTime} ${moscowLabel}`;
-                        moscowTimeElement.style.display = 'inline-block';
-                    } else {
-                        moscowTimeElement.style.display = 'none';
-                    }
-                }
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetScreen = this.getAttribute('data-screen');
+                    
+                    // Обновление активных табов
+                    tabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Показ соответствующего экрана
+                    screens.forEach(screen => {
+                        screen.classList.remove('active');
+                        if (screen.id === targetScreen) {
+                            screen.classList.add('active');
+                        }
+                    });
+                });
             });
         }
 
         // Смена языка
         function changeLanguage(lang) {
+            console.log('Смена языка на:', lang);
             currentLanguage = lang;
             
-            // Обновляем активную кнопку языка
-            document.querySelectorAll('.lang-btn').forEach(btn => {
+            // Обновление активной кнопки языка
+            const langBtns = document.querySelectorAll('.lang-btn');
+            langBtns.forEach(btn => {
                 btn.classList.remove('active');
             });
-            event.target.classList.add('active');
-
-            // Обновляем тексты
-            updateTexts();
-            updatePlaceholders();
-            updateSelectOptions();
             
-            // Перегенерируем календарь с новой локалью
-            generateDateGrid();
+            // Находим и активируем нужную кнопку
+            const targetBtn = Array.from(langBtns).find(btn => 
+                btn.getAttribute('onclick').includes(`'${lang}'`)
+            );
+            if (targetBtn) {
+                targetBtn.classList.add('active');
+            }
             
-            // Обновляем отображение времени и абонементы
-            updateTimeSlots();
-            generateSubscriptionCards();
+            // Применение переводов
+            applyTranslations(lang);
+            
+            // Обновляем временные слоты с новым языком
             generateTimeSlots();
+            
+            showMessage('info', `Language changed to ${lang.toUpperCase()}`);
         }
 
-        function updateTexts() {
-            document.querySelectorAll('[data-text]').forEach(element => {
+        // Применение переводов
+        function applyTranslations(lang) {
+            const elements = document.querySelectorAll('[data-text]');
+            elements.forEach(element => {
                 const key = element.getAttribute('data-text');
-                if (translations[currentLanguage][key]) {
-                    element.textContent = translations[currentLanguage][key];
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
                 }
             });
         }
 
-        function updatePlaceholders() {
-            document.querySelectorAll('[data-placeholder]').forEach(element => {
-                const key = element.getAttribute('data-placeholder');
-                if (translations[currentLanguage][key]) {
-                    element.placeholder = translations[currentLanguage][key];
-                }
-            });
-        }
-
-        function updateSelectOptions() {
-            document.querySelectorAll('option[data-text]').forEach(option => {
-                const key = option.getAttribute('data-text');
-                if (translations[currentLanguage][key]) {
-                    option.textContent = translations[currentLanguage][key];
-                }
-            });
-        }
-
-        // Навигация между экранами
-        function showScreen(screenName) {
-            document.querySelectorAll('.screen').forEach(screen => {
-                screen.classList.remove('active');
-            });
-            
-            document.querySelectorAll('.tab').forEach(tab => {
-                tab.classList.remove('active');
-            });
-            
-            document.getElementById(screenName).classList.add('active');
-            event.target.classList.add('active');
-        }
-
-        // Генерация календаря на следующие 7 дней
+        // Генерация сетки дат (только вт-вс)
         function generateDateGrid() {
             const dateGrid = document.getElementById('dateGrid');
-            dateGrid.innerHTML = ''; // Очищаем предыдущие дни
-            const today = new Date();
+            if (!dateGrid) return;
             
-            for (let i = 0; i < 7; i++) {
+            const today = new Date();
+            const dates = [];
+            
+            // Генерируем даты на следующие 4 недели, исключая понедельники
+            for (let i = 0; i < 28; i++) {
                 const date = new Date(today);
                 date.setDate(today.getDate() + i);
                 
-                const daySlot = document.createElement('div');
-                daySlot.className = 'day-slot';
-                daySlot.onclick = () => selectDate(daySlot, date);
+                // Проверяем день недели (0 = воскресенье, 1 = понедельник, ...)
+                const dayOfWeek = date.getDay();
                 
-                const locale = currentLanguage === 'ru' ? 'ru-RU' : 'en-US';
-                const dayName = date.toLocaleDateString(locale, { weekday: 'short' });
-                const dayNumber = date.getDate();
+                // Исключаем понедельники (dayOfWeek === 1)
+                if (dayOfWeek !== 1) {
+                    dates.push(date);
+                }
                 
-                daySlot.innerHTML = `<div>${dayName}</div><div>${dayNumber}</div>`;
-                dateGrid.appendChild(daySlot);
-            }
-        }
-
-        function selectDate(element, date) {
-            document.querySelectorAll('.day-slot').forEach(slot => {
-                slot.classList.remove('selected');
-            });
-            element.classList.add('selected');
-            userData.selectedDate = date;
-        }
-
-        function selectTime(element) {
-            document.querySelectorAll('.time-slot').forEach(slot => {
-                slot.classList.remove('selected');
-            });
-            element.classList.add('selected');
-            userData.selectedTime = element.getAttribute('data-moscow-time');
-        }
-
-        // Сохранение регистрации
-        function saveRegistration() {
-            userData.name = document.getElementById('userName').value;
-            userData.email = document.getElementById('userEmail').value;
-            userData.level = document.getElementById('userLevel').value;
-            userData.medicalIssues = document.getElementById('medicalIssues').value;
-            
-            userData.goals = [];
-            document.querySelectorAll('input[name="goals"]:checked').forEach(goal => {
-                userData.goals.push(goal.id.replace('goal_', ''));
-            });
-            
-            // Сбор травм
-            userData.injuries = [];
-            document.querySelectorAll('input[name="injuries"]:checked').forEach(injury => {
-                userData.injuries.push(injury.id.replace('injury_', ''));
-            });
-            
-            // Сбор отделов позвоночника если выбрана грыжа/протрузия
-            if (document.getElementById('injury_hernia').checked) {
-                userData.spinalSections = [];
-                document.querySelectorAll('input[name="spinal_sections"]:checked').forEach(section => {
-                    userData.spinalSections.push(section.id.replace('spine_', ''));
-                });
+                // Ограничиваем до 14 рабочих дней
+                if (dates.length >= 14) break;
             }
             
-            const message = currentLanguage === 'ru' 
-                ? 'Профиль создан! Теперь вы можете записаться на занятие.'
-                : 'Profile created! Now you can book a class.';
-            alert(message);
-            showScreen('booking');
-            document.querySelector('[onclick="showScreen(\'booking\')"]').click();
+            dateGrid.innerHTML = dates.map(date => {
+                const day = date.getDate();
+                const month = date.toLocaleDateString(currentLanguage === 'ru' ? 'ru' : 'en', { month: 'short' });
+                const weekday = date.toLocaleDateString(currentLanguage === 'ru' ? 'ru' : 'en', { weekday: 'short' });
+                const dateStr = date.toISOString().split('T')[0];
+                
+                return `
+                    <div class="date-slot" onclick="selectDate('${dateStr}')">
+                        <div style="font-weight: bold;">${day}</div>
+                        <div style="font-size: 12px;">${month}</div>
+                        <div style="font-size: 11px; opacity: 0.7;">${weekday}</div>
+                    </div>
+                `;
+            }).join('');
         }
 
-        // Запись на занятие
+        // Генерация временных слотов (конвертация в местное время)
+        function generateTimeSlots() {
+            const timeSlots = document.getElementById('timeSlots');
+            if (!timeSlots) return;
+            
+            // Московское время занятий
+            const moscowTimes = ['10:00', '11:00', '20:00', '21:00'];
+            
+            timeSlots.innerHTML = moscowTimes.map(moscowTime => {
+                const localTime = convertMoscowTimeToLocal(moscowTime);
+                const isBooked = Math.random() > 0.8; // Реже делаем слоты занятыми
+                const className = isBooked ? 'time-slot booked' : 'time-slot';
+                const onclick = isBooked ? '' : `onclick="selectTime('${moscowTime}', '${localTime}')"`;
+                const bookedText = currentLanguage === 'ru' ? 'Занято' : 'Booked';
+                
+                return `
+                    <div class="${className}" ${onclick} data-moscow="${moscowTime}">
+                        ${localTime}
+                        <br><small style="opacity: 0.7;">${moscowTime} МСК</small>
+                        ${isBooked ? `<br><small>${bookedText}</small>` : ''}
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Выбор даты
+        function selectDate(dateStr) {
+            selectedDate = dateStr;
+            
+            // Обновление UI
+            const dateSlots = document.querySelectorAll('.date-slot');
+            dateSlots.forEach(slot => slot.classList.remove('selected'));
+            event.target.closest('.date-slot').classList.add('selected');
+            
+            console.log('Выбрана дата:', dateStr);
+        }
+
+        // Выбор времени
+        function selectTime(moscowTime, localTime) {
+            selectedTime = moscowTime; // Сохраняем московское время для отправки
+            
+            // Обновление UI
+            const timeSlots = document.querySelectorAll('.time-slot:not(.booked)');
+            timeSlots.forEach(slot => slot.classList.remove('selected'));
+            event.target.classList.add('selected');
+            
+            console.log('Выбрано время:', localTime, 'местное /', moscowTime, 'МСК');
+        }
+
+        // Бронирование занятия
         function bookClass() {
-            if (!userData.selectedDate || !userData.selectedTime) {
-                const message = currentLanguage === 'ru' 
-                    ? 'Пожалуйста, выберите дату и время'
-                    : 'Please select date and time';
-                alert(message);
+            if (!selectedDate || !selectedTime) {
+                const message = currentLanguage === 'ru' ? 
+                    'Пожалуйста, выберите дату и время' : 
+                    'Please select date and time';
+                showMessage('error', message);
                 return;
             }
             
+            const intensity = document.getElementById('intensitySlider').value;
+            
             const booking = {
-                date: userData.selectedDate,
-                time: userData.selectedTime,
-                type: document.getElementById('practiceType').value,
-                intensity: document.getElementById('intensitySlider').value
+                date: selectedDate,
+                time: selectedTime,
+                intensity: intensity,
+                timestamp: new Date().toISOString()
             };
             
-            bookings.push(booking);
-            const message = currentLanguage === 'ru' 
-                ? 'Запись на занятие успешно создана!'
-                : 'Class booking successfully created!';
-            alert(message);
-            showScreen('diary');
-            document.querySelector('[onclick="showScreen(\'diary\')"]').click();
+            console.log('Создание записи:', booking);
+            
+            const successMessage = currentLanguage === 'ru' ? 
+                'Запись на занятие создана успешно!' : 
+                'Class booking created successfully!';
+            showMessage('success', successMessage);
+            
+            // Добавление в мои записи
+            addBookingCard(booking);
+            
+            // Сброс выбора
+            resetSelection();
+        }
+
+        // Добавление карточки записи
+        function addBookingCard(booking) {
+            const bookingCards = document.getElementById('bookingCards');
+            if (!bookingCards) return;
+            
+            const classLabel = currentLanguage === 'ru' ? 'Занятие йогой' : 'Yoga class';
+            const dateLabel = currentLanguage === 'ru' ? 'Дата:' : 'Date:';
+            const timeLabel = currentLanguage === 'ru' ? 'Время:' : 'Time:';
+            const intensityLabel = currentLanguage === 'ru' ? 'Интенсивность:' : 'Intensity:';
+            
+            // Конвертируем московское время в местное для отображения
+            const localTime = convertMoscowTimeToLocal(booking.time);
+            
+            const bookingCard = document.createElement('div');
+            bookingCard.className = 'booking-card';
+            bookingCard.innerHTML = `
+                <h4>${classLabel}</h4>
+                <div class="booking-details">
+                    <div><strong>${dateLabel}</strong> ${new Date(booking.date).toLocaleDateString(currentLanguage === 'ru' ? 'ru' : 'en')}</div>
+                    <div><strong>${timeLabel}</strong> ${localTime} (${booking.time} МСК)</div>
+                    <div><strong>${intensityLabel}</strong> ${booking.intensity}/5</div>
+                </div>
+            `;
+            
+            bookingCards.appendChild(bookingCard);
+        }
+
+        // Сброс выбора
+        function resetSelection() {
+            selectedDate = null;
+            selectedTime = null;
+            
+            document.querySelectorAll('.date-slot.selected').forEach(slot => 
+                slot.classList.remove('selected'));
+            document.querySelectorAll('.time-slot.selected').forEach(slot => 
+                slot.classList.remove('selected'));
+        }
+
+        // Настройка форм
+        function setupForms() {
+            // Форма аутентификации
+            const authForm = document.getElementById('authForm');
+            if (authForm) {
+                authForm.addEventListener('submit', handleAuth);
+            }
+            
+            // Форма регистрации
+            const registrationForm = document.getElementById('registrationForm');
+            if (registrationForm) {
+                registrationForm.addEventListener('submit', handleRegistration);
+            }
+            
+            // Форма дневника
+            const diaryForm = document.getElementById('diaryForm');
+            if (diaryForm) {
+                diaryForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    saveDiary();
+                });
+            }
+            
+            // Обработка чекбокса "Другое" в травмах
+            const otherInjuryCheckbox = document.getElementById('injury_other');
+            const otherInjuryField = document.getElementById('otherInjuryField');
+            
+            if (otherInjuryCheckbox && otherInjuryField) {
+                otherInjuryCheckbox.addEventListener('change', function() {
+                    otherInjuryField.style.display = this.checked ? 'block' : 'none';
+                    
+                    // Очищаем поле при снятии галочки
+                    if (!this.checked) {
+                        document.getElementById('otherInjuryText').value = '';
+                    }
+                });
+            }
+        }
+
+        // Обработка аутентификации
+        function handleAuth(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('authEmail').value;
+            const password = document.getElementById('authPassword').value;
+            
+            console.log('Попытка входа:', email);
+            
+            const successMessage = currentLanguage === 'ru' ? 
+                'Вход выполнен успешно!' : 
+                'Login successful!';
+            
+            // Имитация аутентификации
+            setTimeout(() => {
+                showMessage('success', successMessage);
+                currentUser = { email: email };
+            }, 1000);
+        }
+
+        // Обработка регистрации
+        function handleRegistration(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData.entries());
+            
+            // Проверка совпадения паролей
+            if (data.userPassword !== data.userPasswordConfirm) {
+                const errorMessage = currentLanguage === 'ru' ? 
+                    'Пароли не совпадают' : 
+                    'Passwords do not match';
+                showMessage('error', errorMessage);
+                return;
+            }
+            
+            // Собираем выбранные цели
+            const goals = [];
+            document.querySelectorAll('input[name="goals"]:checked').forEach(checkbox => {
+                goals.push(checkbox.value);
+            });
+            data.goals = goals;
+            
+            // Собираем выбранные травмы
+            const injuries = [];
+            document.querySelectorAll('input[name="injuries"]:checked').forEach(checkbox => {
+                injuries.push(checkbox.value);
+            });
+            data.injuries = injuries;
+            
+            // Добавляем описание других травм если указано
+            if (document.getElementById('injury_other').checked) {
+                data.otherInjuryText = document.getElementById('otherInjuryText').value;
+            }
+            
+            console.log('Регистрация пользователя:', data);
+            
+            const successMessage = currentLanguage === 'ru' ? 
+                'Профиль создан успешно!' : 
+                'Profile created successfully!';
+            
+            // Имитация регистрации
+            setTimeout(() => {
+                showMessage('success', successMessage);
+            }, 1000);
         }
 
         // Сохранение дневника
         function saveDiary() {
-            const diaryEntry = {
-                date: new Date(),
-                menstruation: document.querySelector('input[name="menstruation"]:checked')?.value,
-                cycleDay: document.getElementById('cycleDay').value,
-                energy: document.getElementById('energySlider').value,
-                pains: [],
-                wishes: document.getElementById('todayWishes').value
-            };
+            const formData = new FormData(document.getElementById('diaryForm'));
+            const data = Object.fromEntries(formData.entries());
             
-            if (document.getElementById('pain_head').checked) diaryEntry.pains.push('head');
-            if (document.getElementById('pain_back').checked) diaryEntry.pains.push('back');
-            if (document.getElementById('pain_knee').checked) diaryEntry.pains.push('knee');
-            if (document.getElementById('pain_neck').checked) diaryEntry.pains.push('neck');
+            // Добавляем данные слайдеров
+            data.energyLevel = document.getElementById('energySlider').value;
+            data.cycleDay = document.getElementById('cycleDay').value;
+            data.todayWishes = document.getElementById('todayWishes').value;
             
-            diaryEntries.push(diaryEntry);
-            const message = currentLanguage === 'ru' 
-                ? 'Дневник сохранен! Информация передана тренеру.'
-                : 'Diary saved! Information sent to trainer.';
-            alert(message);
+            // Собираем выбранные боли
+            const pains = [];
+            document.querySelectorAll('input[name="pains"]:checked').forEach(checkbox => {
+                pains.push(checkbox.value);
+            });
+            data.pains = pains;
+            
+            console.log('Сохранение дневника:', data);
+            
+            const successMessage = currentLanguage === 'ru' ? 
+                'Дневник сохранен!' : 
+                'Diary saved!';
+            showMessage('success', successMessage);
         }
 
         // Сохранение отзыва после практики
         function savePostPractice() {
             const afterFeeling = document.getElementById('afterFeeling').value;
-            const complexity = document.getElementById('practiceComplexity').value;
+            const practiceComplexity = document.getElementById('practiceComplexity').value;
             
-            if (afterFeeling && complexity) {
-                const message = currentLanguage === 'ru' 
-                    ? 'Спасибо за отзыв! Это поможет улучшить следующие занятия.'
-                    : 'Thank you for feedback! This will help improve future classes.';
-                alert(message);
-            } else {
-                const message = currentLanguage === 'ru' 
-                    ? 'Пожалуйста, заполните все поля'
-                    : 'Please fill all fields';
-                alert(message);
+            if (!afterFeeling || !practiceComplexity) {
+                const errorMessage = currentLanguage === 'ru' ? 
+                    'Заполните все поля' : 
+                    'Fill in all fields';
+                showMessage('error', errorMessage);
+                return;
+            }
+            
+            const feedback = {
+                afterFeeling: afterFeeling,
+                practiceComplexity: practiceComplexity,
+                timestamp: new Date().toISOString()
+            };
+            
+            console.log('Сохранение отзыва:', feedback);
+            
+            const successMessage = currentLanguage === 'ru' ? 
+                'Отзыв сохранен!' : 
+                'Feedback saved!';
+            showMessage('success', successMessage);
+        }
+
+        // Выход из системы
+        function signOut() {
+            currentUser = null;
+            const message = currentLanguage === 'ru' ? 
+                'Вы вышли из системы' : 
+                'You have signed out';
+            showMessage('info', message);
+            
+            // Переход на экран входа
+            document.querySelector('.tab[data-screen="auth"]').click();
+        }
+
+        // Показ сообщений
+        function showMessage(type, text) {
+            const messageElement = document.getElementById(type + 'Message');
+            if (messageElement) {
+                messageElement.textContent = text;
+                messageElement.style.display = 'block';
+                
+                // Скрываем через 5 секунд
+                setTimeout(() => {
+                    messageElement.style.display = 'none';
+                }, 5000);
             }
         }
 
-        // Показ деталей клиента
-        function showClientDetails() {
-            const clientSelect = document.getElementById('clientSelect');
-            const clientDetails = document.getElementById('clientDetails');
-            
-            if (clientSelect.value) {
-                clientDetails.classList.remove('hidden');
-            } else {
-                clientDetails.classList.add('hidden');
-            }
-        }
+        // PWA установка
+        let deferredPrompt;
+        const installButton = document.getElementById('installButton');
 
-        // Инициализация приложения
-        window.onload = function() {
-            generateDateGrid();
-            updateTexts();
-            updatePlaceholders();
-            updateSelectOptions();
-            updateTimezoneDisplay();
-            updateTimeSlots();
-        };
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            installButton.style.display = 'block';
+        });
+
+        installButton.addEventListener('click', () => {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                        console.log('PWA установлен');
+                    }
+                    deferredPrompt = null;
+                    installButton.style.display = 'none';
+                });
+            }
+        });
     </script>
 </body>
 </html>
